@@ -1,39 +1,48 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Valentine 💖</title>
+<title>Valentine 💜</title>
+
 <style>
 body{
   margin:0;
   font-family: Arial, sans-serif;
-  background:#e6e6fa;
+  background:#e6e6fa;   /* FULL LAVENDER BACKGROUND */
   display:flex;
   justify-content:center;
   align-items:center;
   height:100vh;
 }
 
+/* CARD */
 .card{
-  background:#fff;
+  background:#f4f1ff;   /* light lavender card */
   padding:30px;
   border-radius:20px;
   width:380px;
   text-align:center;
+  box-shadow:0 10px 25px rgba(0,0,0,0.15);
 }
 
 .hide{ display:none; }
 
+/* BUTTONS */
 button{
-  padding:10px 20px;
-  border-radius:10px;
+  padding:10px 22px;
+  border-radius:12px;
   font-size:16px;
   cursor:pointer;
   margin:10px;
   border:none;
-  background:#ff7aa2;
+  background:#b39ddb;   /* lavender button */
   color:white;
 }
 
+button:hover{
+  background:#9575cd;
+}
+
+/* HEARTS */
 .heart{
   position:fixed;
   bottom:0;
@@ -52,7 +61,7 @@ button{
 
 <!-- STEP 1 -->
 <div class="card" id="step1">
-  <h3>Ready for valentines 💌</h3>
+  <h3>Ready for Valentines 💌</h3>
   <p>Hi Bachuu,</p>
   <p>I made something special for you.</p>
   <button onclick="openValentine()">Open your Valentine 💖</button>
@@ -69,7 +78,7 @@ button{
 
 <!-- STEP 3 -->
 <div class="card hide" id="step3">
-  <h1>💖 YAY!!! 💖</h1>
+  <h1>💜 YAY!!! 💜</h1>
   <p>Best decision ever 😘</p>
 
   <!-- SQUARE PHOTO -->
@@ -79,6 +88,7 @@ button{
   <p>I love you ❤️</p>
 </div>
 
+<!-- SONG -->
 <audio id="song" src="tum-hi-ho.mp3"></audio>
 
 <script>
@@ -97,7 +107,7 @@ function yesClick(){
 function createHeart(){
   const h=document.createElement("div");
   h.className="heart";
-  h.innerHTML="❤️";
+  h.innerHTML="🤍";
   h.style.left=Math.random()*100+"vw";
   document.body.appendChild(h);
   setTimeout(()=>h.remove(),4000);
